@@ -1,0 +1,8 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "Example API for a contacts database app",
+  "license": "ISC",
+  "author": "",
+  "type": "module"
+}
