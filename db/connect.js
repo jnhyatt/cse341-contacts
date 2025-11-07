@@ -17,6 +17,7 @@ try {
 } catch (e) {
     console.error(e);
     await client.close();
+    process.exit(1);
 }
 
 export default client;
