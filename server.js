@@ -1,16 +1,10 @@
-import express from "express";
-import cors from "cors";
-import mongoClient from "./db/connect.js";
-import contactsRouter from "./routes/contacts.js";
+import app from "./app.js";
+import mongoClient from "./config/db.js";
 
-const app = express();
 const port = process.env.PORT || 8080;
-const server = app
-    .use(cors())
-    .use("/contacts", contactsRouter)
-    .listen(port, () => {
-        console.log(`listening on port ${port}`);
-    });
+const server = app.listen(port, () => {
+    console.log(`listening on port ${port}`);
+});
 
 // Gracefully close MongoDB connection on server shutdown (ctrl+C). Note to self: at least in
 // Git Bash on Windows in VS Code's integrated terminal, running `npm start` launches `node` as a
